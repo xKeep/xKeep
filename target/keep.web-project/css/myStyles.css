@@ -1,0 +1,120 @@
+.marginmenu {
+    margin-top: 90px;
+}
+.radio-item {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    margin: 10px 0 0;
+}
+
+.radio-item input[type='radio'] {
+    display: none;
+}
+
+.radio-item label {
+    color: #666;
+    font-weight: normal;
+}
+
+.radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 6px solid #004c97;
+    background-color: transparent;
+}
+
+.radio-item input[type=radio]:checked + label:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 16px;
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    content: " ";
+    display: block;
+    background: #FF0000;
+}
+
+#radio-item-color1 label:before {
+    border-color:  #F3F3F3;
+}
+
+#radio-item-color1 input[type=radio]:checked + label:after {
+    background: #F3F3F3;
+}
+
+#radio-item-color2 label:before {
+    border-color: #FF8A80;
+}
+
+#radio-item-color2 input[type=radio]:checked + label:after {
+    background: #FF8A80;
+}
+
+#radio-item-color3 label:before {
+     border-color: #FCD287;
+ }
+
+#radio-item-color3 input[type=radio]:checked + label:after {
+    background: #FCD287;
+}
+
+#radio-item-color4 label:before {
+    border-color: #FFFF8D;
+}
+
+#radio-item-color4 input[type=radio]:checked + label:after {
+    background: #FFFF8D;
+}
+
+#radio-item-color5 label:before {
+    border-color: #CFD8DC;
+}
+
+#radio-item-color5 input[type=radio]:checked + label:after {
+    background: #CFD8DC;
+}
+
+#radio-item-color6 label:before {
+    border-color: #AFE5FD;
+}
+
+#radio-item-color6 input[type=radio]:checked + label:after {
+    background: #AFE5FD;
+}
+
+#radio-item-color7 label:before {
+    border-color: #A7FFEB;
+}
+
+#radio-item-color7 input[type=radio]:checked + label:after {
+    background: #A7FFEB;
+}
+
+#radio-item-color8 label:before {
+    border-color: #CCFF90;
+}
+
+#radio-item-color8 input[type=radio]:checked + label:after {
+    background: #CCFF90;
+}
+
+.shortNoteDiv{
+    padding: 10px;
+}
+
+.shortNoteHeading{
+    padding-top: 0px;
+    margin-top: 0;
+}
+
+.shortNoteRow{
+    margin-top: 20px;
+}
