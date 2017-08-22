@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xkeepwebproject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="keep.web-project.war">
+      <element id="artifact" artifact-name="xkeepwebproject:war exploded" />
+    </root>
+  </artifact>
+</component>
