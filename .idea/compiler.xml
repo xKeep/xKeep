@@ -6,12 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="keepwebproject" />
-        <module name="xKeep" />
+        <module name="xkeepwebproject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="xKeep" target="1.8" />
+      <module name="xkeepwebproject" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
