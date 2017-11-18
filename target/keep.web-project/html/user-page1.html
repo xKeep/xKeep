@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>xKeep</title>
+
+    <!-- Bootstrap -->
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/stylenote1.css" rel="stylesheet">
+	
+    <!-- Вставка HTML5 поєднується з Respond.js для підтримки в IE8 елементів HTML5 та медіа-запитів -->
+    <!-- ЗАСТЕРЕЖЕННЯ: файл Respond.js не працює, якщо ви проглядаєте сторінку відкривши її з файлової системи -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+	<div class="container-fluid">
+		
+		<!-- Блок меню в верхній частині вікна -->
+		<div class="row headMenuXKeepRow">
+			<div class="col-xs-3  col-sm-2 hidden-md hidden-lg headMenuXKeep mainMenuBurger">
+				<div class="">
+					<button type="button" class="btn btn-default menuButton" data-toggle="modal" data-target="#burgerMenu">
+						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			
+			<div class="hidden-xs  hidden-sm col-md-3 col-lg-3 headMenuXKeep showSelectedFolder">
+				<div class="">
+					<!--selectedFolderxKEEP-->
+				</div>
+			</div>
+			
+			<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 headMenuXKeep showLogo">
+				<div class="">
+					xKEEP
+				</div>
+			</div>
+			
+			<div class="col-xs-9 col-sm-7 col-md-6 col-lg-6 headMenuXKeep showUserName">
+				<div class="">
+					<span class="glyphicon glyphicon-user glyphiconUser" aria-hidden="true"></span>
+					<span><!--LoginUserName--></span>
+					<span> </span>
+					<button type="button" class="btn btn-default menuButton" data-toggle="modal" data-target="#quitXkeep">
+						<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!-- Блок: зліва бокове меню, зправа - поле для нотаток -->
+		<div class="row">
+		
+
+
+
+			<!-- Блок ліве бокове меню -->
+			<div class="hidden-xs  hidden-sm col-md-4 col-lg-3 sidebar leftMenuXKeep">
+				
+				<div class="colorSelect">
+
+					<div>
+						<form action="ColorFilter" method="POST">
+							<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+							<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+							<button name="setFilterColor" value="color1" type="submit" class="btn btn-default color1 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color2" type="submit" class="btn btn-default color2 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span  aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color3" type="submit" class="btn btn-default color3 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color4" type="submit" class="btn btn-default color4 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+						</form>
+					</div>
+
+					<div>
+						<form action="ColorFilter" method="POST">
+							<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+							<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+							<button name="setFilterColor" value="color5" type="submit" class="btn btn-default color5 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color6" type="submit" class="btn btn-default color6 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color7" type="submit" class="btn btn-default color7 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="colorAll" type="submit" class="btn btn-default color8 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+						</form>
+					</div>
+
+				</div>
+				
+				<div class="allLeftButton" >
+
+					<form action="FolderFilter" method="POST">
+						<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+						<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+						<div class="btn-group-vertical" role="group">
+
+							<button name="changeToFolder" value="actualNotes" type="submit" class="btn btn-default oneButtonLeftMenu">
+									<span class="nameButtonLeftMenu">АКТУАЛЬНІ</span>
+							</button>
+							<button name="changeToFolder" value="finishedNotes" type="submit" class="btn btn-default oneButtonLeftMenu">
+									<span class="nameButtonLeftMenu">ЗАВЕРШЕНІ</span>
+							</button>
+							<button name="changeToFolder" value="removedNotes" type="submit" class="btn btn-default oneButtonLeftMenu">
+									<span class="nameButtonLeftMenu">КОРЗИНА</span>
+							</button>
+
+							<button type="button" class="btn btn-default oneButtonLeftMenu" data-toggle="modal" data-target="#aboutUs">
+									<span class="nameButtonLeftMenu">ПРО НАС</span>
+							</button>
+						</div>
+					</form>
+					</br>
+					<form action="changeDesign" method="POST">
+						<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+						<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+						<div class="btn-group-vertical" role="group">
+							<button type="submit" class="btn btn-default oneButtonLeftMenu">
+								<span class="nameButtonLeftMenu">DARCULA</span>
+							</button>
+						</div>
+					</form>
+
+				</div>
+				
+			</div>
+			
+			
+			<!-- Блок поле для нотаток -->
+			<div class="col-xs-12  col-sm-12 col-md-8 col-md-offset-4 col-lg-9 col-lg-offset-3 areaForAllNote">
+				
+				<!-- 12 стовпчиків поля для нотаток -->
+				<div class="row mainXKeep">
+				
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 createNewNote">
+						<div class="positionButtonCreateNote">
+							<button type="button" class="btn btn-default buttonCreateNewNote" data-toggle="modal" data-target="#createNewNoteModalWindow">
+								<span class="buttonCreateNote">СТВОРИТИ НОВУ НОТАТКУ</span>
+							</button>	
+						</div>
+					</div>
+					
+					<!--divAllNote-->
+					
+				</div>
+				
+				
+			</div>
+			
+		</div>
+		
+
+	</div>
+
+
+
+
+
+	<!-- МОДАЛЬНІ ВІКНА ============================================================================================ -->
+	<!-- MODALS!!! -->
+
+	<!--modalWindowsForAllNotes-->
+
+	<!-- Модальне вікно нової нотатки ===============================================================================-->
+	<div id="createNewNoteModalWindow" class="modal fade windowNewNote">
+		<div class="modal-dialog borderForModalWindow">
+			<div class="modal-content">
+
+				<form action="createNewNote" style="display:inline" method="POST">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Створити нову нотатку</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="commentHeadNote">Заголовок нотатки</label>
+							<textarea name="headNote" class="form-control" style="resize: none" rows="1" id="commentHeadNote" maxlength="20"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="commentTextNote">Текст нотатки</label>
+							<textarea name="textNote" class="form-control" style="resize: none" rows="5" id="commentTextNote"></textarea>
+						</div>
+
+					</div>
+
+					<div class="modal-footer">
+
+						<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+						<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+
+						<button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+						<button type="submit" class="btn btn-primary">Зберегти</button>
+
+					</div>
+				</form>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+	<!-- Модалне вікно виходу з xKEEP ============================================================================== -->
+	<div id="quitXkeep" class="modal fade windowQuitXkeep">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+					<h2 class="modal-title"><!--LoginUserName-->! Бажаєте вийти з xKEEP ?</h2>
+				</div>
+
+				<div class="modal-footer">
+					<form action="UserQuit" method="POST">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Повернутись в xKEEP</button>
+						<button type="submit" class="btn btn-primary">Вийти з xKEEP</button>
+					</form>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<!-- Модальне вікно бокового меню ============================================================================== -->
+	<div id="burgerMenu" class="modal fade windowTotalBurgerMenu">
+		<div class="modal-dialog windowsModalBurgerMenu">
+			<div class="modal-content windowBurgerMenu">
+
+				<div class="colorSelect">
+
+					<div>
+						<form action="ColorFilter" method="POST">
+							<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+							<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+							<button name="setFilterColor" value="color1" type="submit" class="btn btn-default color1 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color2" type="submit" class="btn btn-default color2 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span  aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color3" type="submit" class="btn btn-default color3 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color4" type="submit" class="btn btn-default color4 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+						</form>
+					</div>
+
+					<div>
+						<form action="ColorFilter" method="POST">
+							<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+							<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+							<button name="setFilterColor" value="color5" type="submit" class="btn btn-default color5 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color6" type="submit" class="btn btn-default color6 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="color7" type="submit" class="btn btn-default color7 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+							<button name="setFilterColor" value="colorAll" type="submit" class="btn btn-default color8 colorBox" data-toggle="modal" data-target="#quitXkeep">
+								<span aria-hidden="true"></span>
+							</button>
+						</form>
+					</div>
+
+				</div>
+
+				<div class="allLeftButton">
+					<form action="FolderFilter" method="POST">
+						<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+						<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+						<div class="btn-group-vertical" role="group">
+
+							<button name="changeToFolder" value="actualNotes" type="submit" class="btn btn-default oneButtonLeftMenu">
+								<span class="nameButtonLeftMenu">АКТУАЛЬНІ</span>
+							</button>
+							<button name="changeToFolder" value="finishedNotes" type="submit" class="btn btn-default oneButtonLeftMenu">
+								<span class="nameButtonLeftMenu">ЗАВЕРШЕНІ</span>
+							</button>
+							<button name="changeToFolder" value="removedNotes" type="submit" class="btn btn-default oneButtonLeftMenu">
+								<span class="nameButtonLeftMenu">КОРЗИНА</span>
+							</button>
+
+							<button type="button" class="btn btn-default oneButtonLeftMenu" data-toggle="modal" data-target="#aboutUs">
+								<span class="nameButtonLeftMenu">ПРО НАС</span>
+							</button>
+
+
+
+
+						</div>
+					</form>
+					</br>
+					<form action="changeDesign" method="POST">
+						<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+						<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+						<div class="btn-group-vertical" role="group">
+							<button type="submit" class="btn btn-default oneButtonLeftMenu">
+								<span class="nameButtonLeftMenu">DARCULA</span>
+							</button>
+						</div>
+					</form>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Сховати меню</button>
+					</div>
+
+				</div>
+
+
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<div id="aboutUs" class="modal fade about"
+		 style="margin-top: 200px;">
+
+
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+					<h2 class="modal-title">Про нас</h2>
+				</div>
+
+				<div class="modal-footer" style="text-align: left;">
+					<p>
+						Даний проект створено командою xKEEP за підтримки та координації компанії ІТ Кластер.
+						Проект надає сервіс по організації ведення особистих нотаток, що допоможуть у організації
+						виконання повсякденних справ...
+					</p>
+
+				</div>
+
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

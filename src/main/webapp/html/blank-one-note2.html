@@ -1,0 +1,69 @@
+﻿<div id="<!--numberNote-->" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 divForAreaNote note">
+	
+	<div class="divForVisibleNote <!--colorNote-->">
+
+
+		<div class="divInfoNote DARCULAareaOneNote">
+			<div class="divHeaderNote DARCULAfieldHeaderNore">
+				<!--headerNote-->
+			</div>
+			<div class="divTextNote DARCULAfieldTextNote">
+				<!--textNote-->
+			</div>
+		</div>
+
+
+		<div class="divButtonNote">
+
+			<form action="changeStatusNote" style="display:inline" method="POST">
+				<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+				<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+				<input name="noteID"  value="<!--InsertNoteID-->"  type="hidden"></input>
+
+				<button name="targetFolder" value="actualNotes" type="submit" class="btn btn-default buttonNote DARCULAbuttonNote1" >
+					<span class="glyphicon glyphicon-open"></span>
+				</button>
+				<button name="targetFolder" value="finishedNotes" type="submit" class="btn btn-default buttonNote DARCULAbuttonNote2">
+					<span class="glyphicon glyphicon-save"></span>
+				</button>
+				<button name="targetFolder" value="removedNotes" type="submit" class="btn btn-default buttonNote DARCULAbuttonNote3">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</form>
+
+			<button type="submit" class="btn btn-default buttonNote bottomEditNote DARCULAbuttonNote4" data-toggle="modal" data-target="#editNoteID<!--InsertNoteID-->">
+				<span class="glyphicon glyphicon-pencil"> Редагувати </span>
+			</button>
+
+			<form action="changeColorNote" style="display:inline" method="POST">
+				<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+				<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+				<input name="noteID"  value="<!--InsertNoteID-->"  type="hidden"></input>
+
+				<button name="setColorNote" value="color1" type="submit" class="btn btn-default buttontop color1 DARCULAbuttonNote5">
+					<span></span>
+				</button>
+				<button name="setColorNote" value="color2" type="submit" class="btn btn-default buttontop color2 DARCULAbuttonNote6">
+					<span></span>
+				</button>
+				<button name="setColorNote" value="color3" type="submit" class="btn btn-default buttontop color3 DARCULAbuttonNote7">
+					<span></span>
+				</button>
+				<button name="setColorNote" value="color4" type="submit" class="btn btn-default buttontop color4 DARCULAbuttonNote8">
+					<span></span>
+				</button>
+				<button name="setColorNote" value="color5" type="submit" class="btn btn-default buttontop color5 DARCULAbuttonNote9">
+					<span></span>
+				</button>
+				<button name="setColorNote" value="color6" type="submit" class="btn btn-default buttontop color6 DARCULAbuttonNote10">
+					<span></span>
+				</button>
+				<button name="setColorNote" value="color7" type="submit" class="btn btn-default buttontop color7 DARCULAbuttonNote11">
+					<span></span>
+				</button>
+			</form>
+
+		</div>
+	</div>
+	
+</div>

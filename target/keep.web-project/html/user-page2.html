@@ -1,0 +1,254 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xKeep</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/left-nav-style.css">
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/stylenote2.css" >
+</head>
+
+<body>
+
+<!------------------------------- БЛОК header ПОЧАТОК ------------------------------->
+<div class="row col-xs-12  col-sm-12 col-md-12 col-lg-12 hederNote">
+    <!-- Назва каталогу -->
+    <div class="col-xs-offset-1 col-xs-3  col-sm-offset-1 col-sm-2   col-md-offset-1 col-md-2  col-lg-offset-1 col-lg-2 logo folderName">
+        <!--selectedFolderxKEEP-->
+    </div>
+
+    <!-- Назва програми -->
+    <div class="col-xs-offset-3 hidden-xs   col-sm-offset-3 col-sm-2   col-md-offset-2 col-md-2  col-lg-offset-2 col-lg-2 logo">
+        xKeep
+    </div>
+
+    <!-- Ім'я залогіненого користувача та кнопка виходу /розлогінення/ -->
+    <div class="col-xs-offset-1 col-xs-4  col-sm-offset-0 col-sm-4   col-md-offset-0 col-md-4  col-lg-offset-1 col-lg-3 quitBlock">
+        <span id="userName"><!--LoginUserName--></span>
+        <button type="submit" class="buttonExit" data-toggle="modal" data-target="#quitXkeep">
+            <img src="images/icon-exit.png" alt="logo">
+        </button>
+    </div>
+</div>
+<!------------------------------- БЛОК header КІНЕЦЬ ------------------------------->
+
+<!------------------------------- БЛОК бокове меню ПОЧАТОК ------------------------------->
+
+<input type="checkbox" id="nav-toggle" checked hidden>
+
+<nav class="nav">
+    <label for="nav-toggle" class="nav-toggle" onclick></label>
+
+    <form action="FolderFilter" method="POST">
+        <input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+        <input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+        <ul>
+
+            <li><button name="changeToFolder" value="actualNotes" type="submit" class="buttonFolder">
+                АКТУАЛЬНІ
+            </button></li>
+
+            <li><button name="changeToFolder" value="finishedNotes" type="submit" class="buttonFolder">
+                ЗАВЕРШЕНІ
+            </button></li>
+
+            <li><button name="changeToFolder" value="removedNotes" type="submit" class="buttonFolder">
+                КОРЗИНА
+            </button></li>
+
+            <li><button type="button" class="buttonFolder" data-toggle="modal" data-target="#aboutUs">
+                ПРО НАС
+            </button></li>
+
+        </ul>
+    </form>
+
+
+    <div>
+        <form action="ColorFilter" method="POST">
+            <input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+            <input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+            <button name="setFilterColor" value="color1" type="submit" class="btn btn-default DarculaColor1 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+            <button name="setFilterColor" value="color2" type="submit" class="btn btn-default DarculaColor2 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+            <button name="setFilterColor" value="color3" type="submit" class="btn btn-default DarculaColor3 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+            <button name="setFilterColor" value="color4" type="submit" class="btn btn-default DarculaColor4 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+        </form>
+    </div>
+
+    <div>
+        <form action="ColorFilter" method="POST">
+            <input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+            <input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+            <button name="setFilterColor" value="color5" type="submit" class="btn btn-default DarculaColor5 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+            <button name="setFilterColor" value="color6" type="submit" class="btn btn-default DarculaColor6 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+            <button name="setFilterColor" value="color7" type="submit" class="btn btn-default DarculaColor7 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+            <button name="setFilterColor" value="colorAll" type="submit" class="btn btn-default DarculaColor8 colorBoxDarcula">
+                <span  aria-hidden="true"></span>
+            </button>
+        </form>
+    </div>
+
+    <form action="changeDesign" method="POST" class="replacement">
+        <input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+        <input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+        <button type="submit" class="button button-block button-redesign">
+            Змінити дизайн на classic
+        </button>
+    </form>
+
+</nav>
+
+<!------------------------------- БЛОК бокове меню КІНЕЦЬ ------------------------------->
+
+
+
+<!------------------------------- БЛОК main ПОЧАТОК ------------------------------->
+
+
+
+
+<main role="main"> <!-- main -->
+
+
+
+    <div class="row col-xs-12 col-sm-12  col-md-12  col-lg-12 worck"> <!-- worck  col-lg-offset-1  -->
+
+        <!-- Кнопка створення нової замітки -->
+        <div class="col-xs-offset-3 col-xs-6   col-sm-offset-3 col-sm-6   col-md-offset-2 col-md-8  col-lg-offset-3 col-lg-6 ">
+            <button type="submit" class="buttonCreate"  data-toggle="modal" data-target="#createNewNoteModalWindow">
+                створити нову нотатку
+            </button>
+        </div>
+
+        <!--divAllNote-->
+
+
+    </div>
+
+
+
+</main>
+<!------------------------------- БЛОК main КІНЕЦЬ ------------------------------->
+
+
+<!--modalWindowsForAllNotes-->
+
+
+<!------------------------------- Модалні вікна xKEEP ПОЧАТОК -------------------->
+<!-- Модальне вікно нової нотатки -->
+<div id="createNewNoteModalWindow" class="modal fade windowNewNote">
+    <div class="modal-dialog borderForModalWindow">
+        <div class="modal-content">
+
+            <form action="createNewNote" style="display:inline" method="POST">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Створити нову нотатку</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="commentHeadNote">Заголовок нотатки</label>
+                        <textarea name="headNote" class="form-control" style="resize: none" maxlength="20" rows="1" id="commentHeadNote" maxlength="20"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="commentTextNote">Текст нотатки</label>
+                        <textarea name="textNote" class="form-control" style="resize: none" rows="5" id="commentTextNote"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+                    <input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                    <button type="submit" class="btn btn-primary">Зберегти</button>
+
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Модалне вікно виходу з xKEEP  -->
+<div id="quitXkeep" class="modal fade windowQuitXkeep">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title"><!--LoginUserName-->! Бажаєте вийти з xKEEP ?</h2>
+            </div>
+
+            <div class="modal-footer">
+                <form action="UserQuit" method="POST">
+                    <button type="button" class="btn btn-default btn-mod-retun" data-dismiss="modal">Повернутись в xKEEP</button>
+                    <button type="submit" class="btn btn-primary btn-mod-quit">Вийти з xKEEP</button>
+                </form>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="aboutUs" class="modal fade about"
+     style="margin-top: 200px;
+             color: white;">
+
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">Про нас</h2>
+            </div>
+
+            <div class="modal-footer" style="text-align: left;">
+                <p>
+                    Даний проект створено командою xKEEP за підтримки та координації компанії ІТ Кластер.
+                    Проект надає сервіс по організації ведення особистих нотаток, що допоможуть у організації
+                    виконання повсякденних справ...
+                </p>
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------- Модалні вікна xKEEP КІНЕЦЬ -------------------->
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>

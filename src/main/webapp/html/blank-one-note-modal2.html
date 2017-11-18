@@ -1,0 +1,39 @@
+﻿
+<!-- Модальне вікно нової нотатки ===============================================================================-->
+<div id="editNoteID<!--InsertNoteID-->" class="modal fade windowNewNote">
+	<div class="modal-dialog borderForModalWindow">
+		<div class="modal-content">
+
+			<form action="editNote" style="display:inline" method="POST">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Редагувати нотатку</h4>
+				</div>
+
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="commentHeadNote">Заголовок нотатки</label>
+						<textarea name="headNote" class="form-control" style="resize: none" rows="1" id="commentHeadNote" maxlength="20"><!--InsertHeaderNote--></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="commentTextNote">Текст нотатки</label>
+						<textarea name="textNote" class="form-control" style="resize: none" rows="5" id="commentTextNote"><!--InsertTextNote--></textarea>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+
+					<input name="selectedFolder" value="<!--InsertFolderSelected-->" type="hidden"></input>
+					<input name="selectedColor"  value="<!--InsertColorSelected-->"  type="hidden"></input>
+					<input name="noteID"  value="<!--InsertNoteID-->"  type="hidden"></input>
+
+					<button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+					<button type="submit" class="btn btn-primary">Зберегти</button>
+
+				</div>
+			</form>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,63 @@
+﻿
+body {
+	background-image: url(../images/body-image-main.png);
+	background-size: 100%;
+}
+
+.startPage {
+	margin: auto;
+    margin-top: 15%;
+	margin-bottom: 5%;
+	height: 500px;
+	min-width: 470px;
+	max-width: 470px;
+	background-color: #E7E7E7;
+	border: 2px solid blue;
+	border-radius: 1%;
+	font-size: 30px;
+	padding: 5px;
+}
+
+.inputForms {
+	font-size: 25px;
+}
+
+#login {
+	margin-top: 50px;
+}
+
+#registration {
+	margin-top: 30px;
+}
+
+#restore {
+	margin-top: 40px;
+}
+
+.message {
+	color: red;
+	font-size: 25px;
+}
+
+.textChangeDesign {
+	text-align: center
+}
+
+.tab-content {
+	height: 74%;
+}
+
+.tab-content > .tab-pane {
+	height: 100%;
+}
+
+.tab-content > .tab-pane > .row {
+	height: 100%;
+}
+
+.tab-content > .tab-pane > .row > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}

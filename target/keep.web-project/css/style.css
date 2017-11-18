@@ -1,0 +1,346 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* Висота базового контейнера */
+html {
+    font-size: 100%;
+}
+html,
+body {	
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+body {
+    color: #333;
+    font: 1em 'Open Sans', sans-serif;
+    background-image: url("../images/random_grey_variations.png");
+}
+
+
+
+
+/*Калібровка сітки в Bootstrap*/
+.worck{
+	background: none;
+	height: 100%;
+	margin-top: 110px;
+	
+	margin-left: 11%;
+    padding-right: 25%;
+	
+	
+}
+
+/*Відступ навколо нотатки*/
+.worck .note{
+	/*margin: 10px !important;*/
+	
+	background:none;
+
+
+	padding: 10px !important;
+}
+
+
+
+/* дизайн полоcи прокрутки */
+::-webkit-scrollbar {
+    width: .65em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(217, 217, 217, 0.75);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(170, 170, 170, 0.6);
+    border-radius: 5px;
+    box-shadow: inset 0.05em 0.05em 0 rgba(0, 0, 0, 0.1), inset 0 -0.05em 0 rgba(0, 0, 0, 0.07);
+}
+
+
+p {
+    /*margin-bottom: 16px;*/
+}
+
+hr {
+    margin: 22px 0;
+    height: 1px;
+    border: 0;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+/*---БОКОВЕ МЕНЮ--- ПОЧАТОК---*/
+/*Кнопки папок з нотатками */
+.buttonFolder{
+	text-align: center;
+	padding: 2px 10px;
+	font-size: 1.7em;
+	margin-top: 10px;
+	margin-left: -5px;
+	color: #179b77 !important;
+    background: #1f2e3a;
+	text-transform: uppercase;
+	border: none;
+}
+
+.buttonFolder:hover, .button:focus {
+  color: #1ab188;
+      transition: opacity .5s .6s, transform .5s .6s;
+}
+
+
+.buttonFolder:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+
+
+.buttonFolder:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+
+.buttonFolder:hover:before {
+    width: 0%;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.buttonFolder:hover:after {
+    width: 0%;
+    background: transparent;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+
+/*Блок селекторів кольору*/
+.colorBoxDarcula {
+	margin-top: 30px;
+	margin-right: 8px;
+	border: solid 2px silver;
+	height: 50px;
+	width: 50px;
+	border-radius: 40%;
+}
+
+.DarculaColor1 {
+	background: #FAFAFA !important;
+}
+
+.DarculaColor1:hover {
+	background: #FAFAFA !important;
+	border: solid 5px #179B77;
+}
+
+.DarculaColor2 {
+	background: #FF8A80 !important;
+}
+
+.DarculaColor2:hover {
+	background: #FF8A80 !important;
+	border: solid 5px #179B77;
+}
+
+.DarculaColor3 {
+	background: #FFD180 !important;
+}
+
+.DarculaColor3:hover {
+	background: #FFD180 !important;
+	border: solid 5px #179B77;
+}
+
+.DarculaColor4 {
+	background: #FFFF8D !important;
+}
+
+.DarculaColor4:hover {
+	background: #FFFF8D !important;
+	border: solid 5px #179B77;
+}
+
+.DarculaColor5 {
+	background: #80D8FF !important;
+}
+
+.DarculaColor5:hover {
+	background: #80D8FF !important;
+	border: solid 5px #179B77;
+}
+
+.DarculaColor6 {
+	background: #A7FFEB !important;
+}
+
+.DarculaColor6:hover {
+	background: #A7FFEB !important;
+	border: solid 5px #179B77;
+}
+
+.DarculaColor7 {
+	background: #CCFF90 !important;
+}
+
+.DarculaColor7:hover {
+	background: #CCFF90 !important;
+		border: solid 5px #179B77;
+}
+
+.DarculaColor8 {
+    background: url("../images/colorAll.png");
+    background-size: cover;
+}
+
+.DarculaColor8:hover {
+    background: url("../images/colorAll.png");
+    background-size: cover;
+	border: solid 5px #179B77;
+}
+
+
+/*Кнопка редизайну*/
+.button{
+	text-align: center;
+	padding: 15px;
+	    margin-bottom: 4em;
+	font-size: 1.5em;
+	margin-top: 1em;
+	margin-left: -5px;
+	color: #179b77;
+    background: #1f2e3a;
+	text-transform: uppercase;
+}
+.button:hover, .button:focus {
+  color: #1ab188;
+}
+
+
+/*Центрування списку папок по лівому краю*/
+ol, ul {
+	padding-left: 1px;
+}
+
+/*---БОКОВЕ МЕНЮ--- КІНЕЦЬ---*/
+
+
+
+
+
+
+
+/*---ХЕДЕР--- ПОЧАТОК---*/
+
+/*Конфігурація блоку*/
+.hederNote{
+	background: #1f2e3a;
+	position: fixed;
+    z-index: 999;
+	color: white;
+	height: 100px;
+	width: 105%;
+	box-shadow:6px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+}
+
+.quitBlock{
+	text-align: right;
+    margin-top: 1px;
+}
+
+/*Логотип xKeep*/
+.logo{
+	font-size: 3em;
+    margin-top: 15px;
+}
+
+/*Кнопка створення нової нотатки*/
+.buttonCreate{
+    text-align: center;
+    padding: 20px;
+	margin-left: 85px !important;
+	margin-top: 1.5% !important;
+    font-size: 1.5em;
+    margin-left: -5px;
+    color: #179b77;
+    background: #1f2e3a;
+    text-transform: uppercase;
+    border-radius: 5%;
+    border: solid 1px silver;
+}
+
+/*Ім'я залогіненого usera*/
+#userName{
+	font-size: 3em;
+	margin-top: 2em !important;
+	vertical-align: middle
+}
+
+/*кнопка виходу користувача*/
+.buttonExit{
+	    background: #1f2e3a;
+		margin-top: 1% !important;
+		border-radius: 50%;
+		padding: 0px;
+		border: none;
+}
+
+/*---ХЕДЕР--- КІНЕЦЬ---*/
+
+/*---МОДАЛЬНІ ВІКНА--- ПОЧAТОК---*/
+.modal-content{
+    background: #179b77;
+	border: solid 5px #177D5E;
+}
+
+
+.modal-header {
+	background: #179b77;
+	color: white;
+}
+
+.modal-footer{
+	background: #179b77;
+}
+.modal-dialog{
+	background: #179b77;
+}
+
+.about{
+
+}
+
+.modal-dialog .modal-content .modal-header .modal-title{
+    text-align: center;
+    font-size: 3em;
+}
+/*---МОДАЛЬНІ ВІКНА--- КІНЕЦЬ---*/

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>xKeep</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles2.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+	<div class="form">
+	
+		<!-- Логотип xKeep -->
+		<div class="tab-content">
+
+            <img src="images/LogoXKeep.jpg" alt="logo">
+
+			<!-- Таб для вибору Реєстрація/Логінування/Відновлення -->
+			<ul class="tab-group">
+				<li class="tab active"><a href="#login"> Логин </a></li>
+				<li class="tab "><a href="#signup">Реєстрація</a></li>
+				<li class="tab "><a href="#restore">Відновлення</a></li>
+			</ul>
+		 </div>
+		<div class="tab-content">
+		
+		
+			
+			<div id="login" > <!--  ***Таб для входу*** -->
+			  
+				
+				<form action="UserLogin" method="POST"><!-- Форма для входу -->
+			  
+					<!-- поле для вводу Email -->
+					<div class="field-wrap">
+                        <label>
+						  Email or Login <span class="req"> </span>
+                        </label>
+                        <input type="text" name="login" required autocomplete="off" />
+					</div>
+			  
+					<!-- поле для вводу Password -->
+					<div class="field-wrap">
+                        <label>
+						  Password <span class="req"> </span>
+                        </label>
+                        <input name="password" type="password" required autocomplete="off"/>
+					</div>
+					
+			  
+					<!-- Кнопка для входу -->
+					<button type="submit"  class="button button-block">
+					  Вхід
+					</button>
+
+				</form><!-- //Форма для входу -->
+				
+			</div><!--  //***Таб для входу*** -->
+
+
+			
+			<div id="signup"><!--  ***Таб для реєстрації*** --> 
+				<!-- Форма для реєстрації -->
+				<form action="UserRegistration" method="POST">
+					
+					<!-- поле для вводу Login -->
+					<div class="field-wrap">
+						<label>
+						  Login<span class="req"> </span>
+						</label>
+                        <input name="username" type="text" required autocomplete="off"/>
+					</div>
+
+					<!-- поле для вводу Email -->
+					<div class="field-wrap">
+						<label>
+						  Email<span class="req"> </span>
+						</label>
+                        <input name="email" type="text" required autocomplete="off"/>
+					</div>
+				  
+					<!-- поле для вводу Password -->
+					<div class="field-wrap">
+						<label>
+						  Password<span class="req"> </span>
+						</label>
+                        <input name="password" type="password" required autocomplete="off"/>
+					</div>
+				
+					<!-- Кнопка для входу -->
+					<button type="submit" class="button button-block">
+						Реєстрація
+					</button>
+				  
+				</form>
+			</div><!--  //***Таб для реєстрації*** -->
+			
+			
+			
+			<div id="restore"> <!--  ***Таб для Таб для Відновлення*** -->
+			
+				<!-- Форма для Відновлення -->
+				<form action="UserRestore" method="POST">
+					
+					<!-- поле для вводу Login -->
+					<div class="field-wrap">
+						<p> Введіть електронну адресу, яку
+							Ви вказали в обліковому записі.
+							xKEEP надішле Вам дані
+							на цю електронну адресу. 
+						</p>
+					</div>
+
+					<!-- поле для вводу Email -->
+					<div class="field-wrap">
+						<label>
+						  Email<span class="req"> </span>
+						</label>
+                        <input name="email" type="text" required autocomplete="off"/>
+					</div>
+				  
+				
+					<!-- Кнопка для входу -->
+					<button type="submit" class="button button-block">
+						Відновити
+					</button>
+				  
+				</form>
+			</div><!--  // ***Таб для Відновлення*** -->
+
+
+			<form action="changeDesign" method="POST" class="replacement">
+				<button type="submit" class="button button-block button-redesign">
+					Змінити дизайн на classic
+				</button>
+
+			</form>
+
+
+
+
+
+		</div><!-- tab-content -->
+		  
+	</div> <!-- /form -->
+
+	<!-- Модальне вікно нової нотатки ===============================================================================-->
+	<div id="answerFromServlet" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content modalWindowAnswerServlet">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span></button>
+					<h2 class="modal-title"></h2>
+					<h2 class="modal-title">
+						<!--comment for bad login-->
+						<!--comment for registration-->
+						<!--comment for restore-->
+					</h2>
+					<h2 class="modal-title"></h2>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+  <script src="js/index_Andrii.js"></script>
+
+	<!--scriptShowModalWindow-->
+
+</body>
+</html>
